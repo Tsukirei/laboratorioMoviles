@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">laboratorio02</string>
+    <string name="bmi_text">BMI</string>
+    <string name="weight_text">Weight</string>
+    <string name="measure_unit_weight">Kg</string>
+    <string name="height_text">Height</string>
+    <string name="hint_text_weight">70</string>
+    <string name="height_hint_text">180</string>
+    <string name="measure_unit_height">cm</string>
+    <string name="calculate_button_text">Calculate</string>
+</resources>
