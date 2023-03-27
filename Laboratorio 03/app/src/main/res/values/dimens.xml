@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gigantGap">64dp</dimen>
+    <dimen name="bigSize">32sp</dimen>
+    <dimen name="bigGap">32dp</dimen>
+    <dimen name="enormousGap">92dp</dimen>
+    <dimen name="smallGap">8dp</dimen>
+</resources>

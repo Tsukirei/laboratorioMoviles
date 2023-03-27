@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Laboratorio03</string>
+    <string name="moneyCountText">Cantidad de dinero</string>
+    <string name="defaultMoneyCounter">0</string>
+    <string name="fiveCentsValue">$0.05</string>
+    <string name="tenCentsValue">$0.10</string>
+    <string name="quarterValue">$0.25</string>
+    <string name="dollarValue">$1</string>
+</resources>
