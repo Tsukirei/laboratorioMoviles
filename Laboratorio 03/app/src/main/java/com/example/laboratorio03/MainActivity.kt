@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import kotlin.math.roundToInt
-
+//variables
 lateinit var moneyCountText: TextView
 lateinit var fiveCentsImg: ImageView
 lateinit var tenCentsImg: ImageView

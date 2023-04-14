@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standar_gap"
+        android:layout_marginTop="224dp"
+
+        android:fontFamily="serif"
+
+        android:text="@string/confirm_instruction_text"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textNameInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_gap"
+        android:layout_marginTop="@dimen/standar_gap"
+        android:text="@string/name_hint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textNameInformationUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standar_gap"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/textNameInformation"
+        app:layout_constraintTop_toTopOf="@+id/textNameInformation"
+        />
+
+    <TextView
+        android:id="@+id/textMailInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standar_gap"
+        android:text="@string/mail_hint"
+        app:layout_constraintStart_toStartOf="@+id/textNameInformation"
+        app:layout_constraintTop_toBottomOf="@+id/textNameInformation"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textMailInformationUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standar_gap"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/textMailInformation"
+        app:layout_constraintStart_toEndOf="@+id/textMailInformation"
+        app:layout_constraintTop_toTopOf="@+id/textMailInformation" />
+
+    <TextView
+        android:id="@+id/textPhoneInformation"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standar_gap"
+        android:text="@string/phone_hint"
+        app:layout_constraintStart_toStartOf="@+id/textMailInformation"
+        app:layout_constraintTop_toBottomOf="@+id/textMailInformation" />
+
+    <TextView
+        android:id="@+id/textPhoneInformationUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/textPhoneInformation"
+        app:layout_constraintStart_toEndOf="@+id/textPhoneInformation"
+        app:layout_constraintTop_toTopOf="@+id/textPhoneInformation" />
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standar_gap"
+
+        android:backgroundTint="@color/button_color"
+        android:text="@string/share_button"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPhoneInformation" />
+</androidx.constraintlayout.widget.ConstraintLayout>
