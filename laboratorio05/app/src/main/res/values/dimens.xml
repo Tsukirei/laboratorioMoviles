@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_gap">8dp</dimen>
+    <dimen name="default_gap">32dp</dimen>
+    <dimen name="default_font_size">32sp</dimen>
+    <dimen name="standar_gap">16dp</dimen>
+    <dimen name="big_gap">64dp</dimen>
+    <dimen name="medium_text_sisz">16sp</dimen>
+    <dimen name="gigant_gap">92dp</dimen>
+    <dimen name="standar_text_size">24sp</dimen>
+</resources>

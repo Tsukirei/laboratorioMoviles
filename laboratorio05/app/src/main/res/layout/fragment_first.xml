@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment"
+    android:background="@color/backgroundLayout">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="@string/page_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/default_font_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_first_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/baseline_add_24"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_first"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_marginStart="@dimen/small_gap"
+        android:layout_marginTop="@dimen/standar_gap"
+        android:layout_marginEnd="@dimen/small_gap"
+        android:backgroundTint="@color/cardLayout"
+        app:cardCornerRadius="@dimen/small_gap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/starwars_foreground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standar_gap"
+                android:text="@string/starwars_title"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_gap"
+                android:text="@string/calification_starwars"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7"
+                android:textColor="@color/calification_color"
+                android:textSize="@dimen/standar_text_size"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_second"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_marginStart="@dimen/small_gap"
+        android:layout_marginTop="@dimen/standar_gap"
+        android:layout_marginEnd="@dimen/small_gap"
+        android:backgroundTint="@color/cardLayout"
+        app:cardCornerRadius="@dimen/small_gap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_first" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
