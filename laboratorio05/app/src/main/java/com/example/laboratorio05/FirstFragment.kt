@@ -15,7 +15,7 @@ class FirstFragment : Fragment() {
     private lateinit var buttonFirstFragment: FloatingActionButton
     private lateinit var cardViewFirst: CardView
     private lateinit var cardViewSecond: CardView
-
+//Todo
 
 
 
