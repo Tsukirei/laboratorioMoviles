@@ -1,5 +1,6 @@
 package com.example.laboratorio05
 
+import android.nfc.Tag
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -9,8 +10,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.laboratorio05.data.model.MovieModel
 import com.example.laboratorio05.data.movies
+import com.example.laboratorio05.databinding.FragmentSecondBinding
 import com.example.laboratorio05.repositories.MovieRepository
 import com.example.laboratorio05.ui.movie.MovieViewModel
 import com.google.android.material.textfield.TextInputEditText
@@ -27,28 +30,51 @@ private lateinit var editTextCualification: EditText
 
 private val movieViewModel: MovieViewModel by activityViewModels {
     MovieViewModel.Factory
+
+
 }
+    private lateinit var binding: FragmentSecondBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false)
+        binding = FragmentSecondBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    private fun observeStatus(){
+        movieViewModel.status.observe(viewLifecycleOwner){ status ->
+
+            when{
+                status.equals(MovieViewModel.WRONG_INFORMATION) ->{
+                    Log.d("APP_TAG", status)
+                    movieViewModel.clearStatus()
+
+            }
+                status.equals(MovieViewModel.MOVIE_CREATED) -> {
+                    Log.d("APP_TAG", status)
+                    Log.d("APP_TAG", movieViewModel.getMovies().toString())
+                    movieViewModel.clearStatus()
+                    findNavController().popBackStack()
+                }
+
+            }
+        }
+    }
+    private fun setViewModel() {
+        binding.viewmodel = movieViewModel
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bind()
-
-
-        buttonSecondFragment.setOnClickListener(){
-            var movieToday= MovieModel(editTextName.text.toString(), editTextCategory.text.toString(), editTextDescription.text.toString(), editTextCualification.text.toString())
-            movieViewModel.addMovies(movieToday)
-            Log.d("movies", movieViewModel.getMovies().toString())
+        setViewModel()
+        observeStatus()
 
 
 
-        }
+
 
 
     }
