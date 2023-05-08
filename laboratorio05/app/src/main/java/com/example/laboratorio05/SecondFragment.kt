@@ -1,6 +1,5 @@
 package com.example.laboratorio05
 
-import android.nfc.Tag
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -11,13 +10,8 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.laboratorio05.data.model.MovieModel
-import com.example.laboratorio05.data.movies
 import com.example.laboratorio05.databinding.FragmentSecondBinding
-import com.example.laboratorio05.repositories.MovieRepository
-import com.example.laboratorio05.ui.movie.MovieViewModel
-import com.google.android.material.textfield.TextInputEditText
-import org.w3c.dom.Text
+import com.example.laboratorio05.ui.movie.viewmodel.MovieViewModel
 
 class SecondFragment : Fragment() {
     // TODO: Rename and change types of parameters
