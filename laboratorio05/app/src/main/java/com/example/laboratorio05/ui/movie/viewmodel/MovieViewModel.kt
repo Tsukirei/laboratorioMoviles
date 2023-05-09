@@ -24,6 +24,8 @@ class MovieViewModel(private val repository: MovieRepository): ViewModel() {
         qualification.value = movie.qualification
     }
 
+
+
     fun getMovies()= repository.getMovies()
 
 

@@ -66,11 +66,6 @@ private val movieViewModel: MovieViewModel by activityViewModels {
         setViewModel()
         observeStatus()
 
-
-
-
-
-
     }
 
     private fun bind(){

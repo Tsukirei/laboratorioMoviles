@@ -1,5 +1,6 @@
 package com.example.laboratorio05.ui.movie.billboard
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -20,7 +21,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class FirstFragment : Fragment() {
-    private lateinit var buttonFirstFragment: FloatingActionButton
+
 
 
     private lateinit var adapter: MovieRecyclerViewAdapter
@@ -43,9 +44,7 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bind()
-        buttonFirstFragment.setOnClickListener{
-            it.findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
-        }
+
 
         setRecyclerView(view)
         binding.buttonFirstFragment.setOnClickListener(){
@@ -58,7 +57,7 @@ class FirstFragment : Fragment() {
 
 
        movieViewModel.setSelectedMovies(movie)
-        findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
+        findNavController().navigate(R.id.action_firstFragment_to_thirdFragment)
 
     }
     private fun displayMovies(){
@@ -69,6 +68,7 @@ class FirstFragment : Fragment() {
 
 
     }
+
 
     private fun setRecyclerView(view: View) {
         binding.RecyclerView.layoutManager = LinearLayoutManager(view.context)
