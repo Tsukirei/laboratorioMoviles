@@ -24,7 +24,7 @@ class LoginFragment : Fragment() {
         LoginViewModel.Factory
     }
 
-    private lateinit var binding: FragmentLoginBinding
+    private lateinit var binding: com.example.laboratorio11.databinding.FragmentLoginBinding
 
     val app by lazy {
         requireActivity().application as RetrofitApplication

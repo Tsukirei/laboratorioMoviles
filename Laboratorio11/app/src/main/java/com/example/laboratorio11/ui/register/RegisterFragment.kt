@@ -40,6 +40,7 @@ class RegisterFragment : Fragment() {
         setViewModel()
         observeStatus()
 
+
     }
     private fun setViewModel() {
         binding.viewmodel = registerViewModel
@@ -62,7 +63,7 @@ class RegisterFragment : Fragment() {
             is RegisterUiStatus.Success -> {
                 registerViewModel.clearStatus()
                 registerViewModel.clearData()
-                findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+                findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
             }
 
             else -> {}

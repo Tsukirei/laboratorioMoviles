@@ -17,7 +17,7 @@
             android:layout_width="@dimen/image_dim"
             android:layout_height="@dimen/image_dim"
             android:layout_marginBottom="16dp"
-            android:src="@drawable/working"
+
             app:layout_constraintBottom_toTopOf="@+id/emailEditText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
